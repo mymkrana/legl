@@ -1,0 +1,528 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon"><title>Our Team</title>
+	<!--Default.css-->
+<link rel="stylesheet" href="css/navbar.css">
+<!--Bootstrap-->
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+<!--Font Awesome-->
+<link rel="stylesheet" href="../use.fontawesome.com/releases/v5.0.9/css/all.css">
+<!--Animate.css-->
+<link rel="stylesheet" href="../cdn.jsdelivr.net/npm/animate.css%403.5.2/animate.min.css">
+<!--Default.css-->
+<link rel="stylesheet" href="css/default.css">
+<!--Jquery UI-->
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<!--Scroll Animate-->
+ <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/aos/2.3.3/aos.css" />
+ <link rel="stylesheet" href="incl/main.css">
+<!--Serif Font-->
+<link href='https://fonts.googleapis.com/css?family=Playfair%20Display' rel='stylesheet'>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131392439-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131392439-1');
+</script>
+
+
+	<!--jQuery-->
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<!--Popper-->
+<script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!--Bootstrap-->
+<script src="../cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+<!--jQuery UI-->
+<script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--Scroll Reveal-->
+ <script src="../cdnjs.cloudflare.com/ajax/libs/aos/2.3.3/aos.js"></script>
+ <script>
+	 $(document).ready(function(){
+		AOS.init({
+			duration: 700, // values from 0 to 3000, with step 50ms
+			once: true, 
+		}); 
+	 });
+	 /* lazyload.js (c) Lorenzo Giuliani
+ * MIT License (http://www.opensource.org/licenses/mit-license.html)
+ *
+ * expects a list of:  
+ * `<img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy">`
+ */
+
+!function(window){
+  var $q = function(q, res){
+        if (document.querySelectorAll) {
+          res = document.querySelectorAll(q);
+        } else {
+          var d=document
+            , a=d.styleSheets[0] || d.createStyleSheet();
+          a.addRule(q,'f:b');
+          for(var l=d.all,b=0,c=[],f=l.length;b<f;b++)
+            l[b].currentStyle.f && c.push(l[b]);
+
+          a.removeRule(0);
+          res = c;
+        }
+        return res;
+      }
+    , addEventListener = function(evt, fn){
+        window.addEventListener
+          ? this.addEventListener(evt, fn, false)
+          : (window.attachEvent)
+            ? this.attachEvent('on' + evt, fn)
+            : this['on' + evt] = fn;
+      }
+    , _has = function(obj, key) {
+        return Object.prototype.hasOwnProperty.call(obj, key);
+      }
+    ;
+
+  function loadImage (el, fn) {
+    var img = new Image()
+      , src = el.getAttribute('data-src');
+    img.onload = function() {
+      if (!! el.parent)
+        el.parent.replaceChild(img, el)
+      else
+        el.src = src;
+
+      fn? fn() : null;
+    }
+    img.src = src;
+  }
+
+  function elementInViewport(el) {
+    var rect = el.getBoundingClientRect()
+
+    return (
+       rect.top    >= 0
+    && rect.left   >= 0
+    && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    )
+  }
+
+    var images = new Array()
+      , query = $q('img.lazy')
+      , processScroll = function(){
+          for (var i = 0; i < images.length; i++) {
+            if (elementInViewport(images[i])) {
+              loadImage(images[i], function () {
+                images.splice(i, i);
+              });
+            }
+          };
+        }
+      ;
+    // Array.prototype.slice.call is not callable under our lovely IE8 
+    for (var i = 0; i < query.length; i++) {
+      images.push(query[i]);
+    };
+
+    processScroll();
+    addEventListener('scroll',processScroll);
+
+}(this);
+</script></head>
+<body>
+	<style>
+		.starting{
+			cursor: pointer;
+		}
+		.bg-overlay1 {
+			background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("img/practice-area-images/our-people.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			color: #fff;
+			transition: all 0.4s;
+			padding: 125px 15px;
+			position: relative;
+			z-index: 0;
+		}
+
+		.search{		
+			background-color: #fff; 
+			padding: 25px 35px;	
+			border-radius: 5px;
+			position: relative;
+				-moz-box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+			box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+			position: relative;
+			margin-top: -95px;
+		}
+		.search  a{
+			color: #8c8a8d;
+		}	
+		.search	a:hover, a:active,a:focus {
+			color: #cc0001;
+			text-decoration: underline;
+		}
+		.search input{
+			margin: 15px 0;	
+			font-size: 1rem;
+			display: block;
+			height: 3.5rem;
+			   -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+			box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+		} 
+
+		.search input[type="search"]{	
+			background: rgba(0, 0, 0, 0.12);
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+				color: #151515;
+		}
+
+		.search .btn-primary{
+			color: #fff;
+			background-color: #cc0001;
+			border-color: #cc0001;
+			-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		}
+
+		.search	.btn-primary:focus, .btn-primary:hover {
+		   opacity: .7;
+		}
+
+		.search ul {
+			border-top: 1px solid #ededed;
+		/*	 text-align: center;*/
+			margin-top: 25px;
+			padding-top: 25px;
+
+		}
+
+		.search ul li {
+			display: inline;
+			list-style: none;
+			margin-right: 5px;
+			font-weight: 300;
+
+		}	
+		.morecontent span {
+			display: none;
+		}
+		.morelink {
+			display: block;
+		}	
+		select {
+			border-radius: 0px;
+			border-color: transparent;
+			outline: none;
+			 color: #8c8a8d;
+			cursor: pointer;
+		}
+
+
+		select option:checked,select option:hover {
+			color: #cc0001;
+		}	
+
+		@media screen and (max-width: 768px) {
+				.bg-overlay1 {
+				padding: 75px 15px;
+			}
+			#morefilters{
+				display: none;
+			}
+			 .display-4 {
+				font-size: 28px;
+				display: inline;
+			}
+			.search{
+				padding: 15px 25px;	
+				border-radius: 5px;	
+				margin-top: -75px;
+			}
+		}
+		.ui-autocomplete {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 0;
+			float: left;
+			display: none;
+			min-width: 160px;
+			_width: 160px;
+			padding: 4px 0;
+			margin: 2px 0 0 0;
+			list-style: none;
+			background-color: #ffffff;
+			border-color: #ccc;
+			border-color: rgba(0, 0, 0, 0.2);
+			border-style: solid;
+			border-width: 1px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+			-webkit-background-clip: padding-box;
+			-moz-background-clip: padding;
+			background-clip: padding-box;
+			*border-right-width: 2px;
+			*border-bottom-width: 2px;
+		}
+		.dummy-media-object {
+			display: block;
+			margin: 0.3em 0;
+			cursor: pointer;
+		}
+		.dummy-media-object img {
+			display: inline-block;
+			width: 70px;
+			margin: 0 10px 0 0;
+			vertical-align: middle;
+		}
+		.round {
+			border-radius: 50%;
+		}
+		.dummy-media-object h3 {
+			vertical-align: middle;
+			font-size: 1.25rem;
+			display: inline-block;
+			font-weight: 300;
+			color: #2E2E2D;
+			margin: 0 0 0 0;
+			width: calc(100% - 90px);
+			text-align: left;
+			-webkit-transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+		.dummy-media-object h3:hover {
+			color: #cc0001;
+		}
+		.lawyer{
+			margin-bottom: 15px;
+		}
+
+		.lawyer ul li{
+			color: #8c8a8d;
+			-webkit-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+		.lawyer ul li:hover{
+			color: #cc0001;
+		}	
+		.border {
+			border: none !important;
+		}
+		.border {
+			-webkit-box-shadow: 0px 6px 1px -1px rgba(0,0,0,0.14);
+			-moz-box-shadow: 0px 6px 1px -1px rgba(0,0,0,0.14);
+			box-shadow: 0px 6px 1px -1px rgba(0,0,0,0.14);
+			}
+			.teamsection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+	</style>
+
+<!--Navbar-->
+	<div class="container-fluid sticky-top bg-white border-bottom d-none d-lg-block">
+	<nav class="navbar navbar-expand-lg navbar-light pt-2 pb-0">
+		<a class="navbar-brand pt-0 pb-0" href="index.html"> 
+			 <img src="img/jsa-logos/jsa-logo-navbar.png" height="70" alt="">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse collapse-desktop navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto font-weight-bold">
+				<a href="firm-profile.html" class="nav-link nav-link-desktop px-3 pb-4 mt-4 hvr-underline-from-center">
+					ABOUT US</i>
+				</a>
+				<a href="our-expertise.html" class="nav-link nav-link-desktop px-3 pb-4 mt-4 hvr-underline-from-center">
+					OUR EXPERTISE</i>
+				</a>
+				<a href="our-people.html" class="nav-link nav-link-desktop px-3 pb-4 mt-4 hvr-underline-from-center">
+					OUR TEAM</i>
+				</a>
+				<a  href="locations.html" class="nav-link nav-link-desktop px-3 pb-4 mt-4 hvr-underline-from-center">
+					OUR LOCATIONS</i>
+				</a>
+				<a href="contact_us.html" class="nav-link nav-link-desktop px-3 pb-4 mt-4 hvr-underline-from-center">
+					CONTACT US</i>
+				</a>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<!--Navbar-->
+
+<!--Mobile Navbar-->
+<div id="the_firm" class="row w-100 m-0 collapse collapse-desktop bg-light-2 require-padding position-fixed">
+	<div class="col-md-10 offset-md-1 text-center">
+		<div class="row w-100 m-0">
+			<div class="col-md-4">
+				<a href="firm-profile.html" style="color:#333;" class="hvr-underline-reveal">FIRM PROFILE</a>
+			</div>
+			<div class="col-md-4">
+				<a href="our-network.html" style="color:#333;" class="hvr-underline-reveal">OUR NETWORK</a>
+			</div>
+			<div class="col-md-4">
+				<a href="life-at-jsa.html" style="color:#333;" class="hvr-underline-reveal">LIFE AT JSA</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Mobile Navbar-->
+
+<div class="container-fluid  bg-overlay1">
+  
+        <div class="text-center">
+            <h1 class="display-4 mb-5 mb-md-0" style="color: #fff;">OUR PEOPLE</h1>
+        </div>
+    
+</div>
+
+<div class="container teamsection">
+	<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="https://lawyerbusinessadvantage.com/wp-content/uploads/2018/03/logo-icon-below-slider.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Team Member One</h5>
+      <p class="card-text">Here will go bio of the team member</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://lawyerbusinessadvantage.com/wp-content/uploads/2018/03/logo-icon-below-slider.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Team Member Two</h5>
+      <p class="card-text">Here will go bio of the team member</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://lawyerbusinessadvantage.com/wp-content/uploads/2018/03/logo-icon-below-slider.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Team Member Two</h5>
+      <p class="card-text">Here will go bio of the team member</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+</div>
+</div>
+	
+	<!-- ============ Footer Start ====================== -->
+
+
+
+<div class="fotter1">
+<div class="container">
+     <div class="row">
+             <div class="col-sm-5">
+                             <h3 class="h33"> <u>We Are</u></h3>
+                        <div class="p1">
+                                       LEGAL LUMINARIES IS A FULL SERVICE LAW FIRM, BASED IN INDIA, OFFERING INNOVATION FUSION OF CAPABILITIES TO CORPORATIONS, INDIVIDUALS AND INTERNATIONAL ENTITIES ACROSS THE GLOBE.
+                        </div>
+               </div>
+
+							 <div class="col-sm-3">
+							 </div>
+							 <div class="col-sm-4" color="red">
+							 <div class="col footerlinks">
+    	<h3 class="h33"><u>Information</u></h3>
+    <div>
+      <ul class="footerlist">
+     <a href="firm-profile.html" class="mx-2" style="font-size: 2rem; text-white">About Us</a> <br>
+	 <a href="our-expertise.html" class="mx-2" style="font-size: 2rem; text-white">Our Expertise</a> <br>
+	    <a href="our-people" class="mx-2" style="font-size: 2rem; text-white">Our Team</a> <br>
+		<a href="locations.html" class="mx-2" style="font-size: 2rem; text-white">Our Locations</a> <br>
+		<a href="contact_us.html" class="mx-2" style="font-size: 2rem; text-white">Contact Us</a> 
+      </ul>
+      </div>
+    </div>
+							 </div>
+</div>
+</div>
+
+</div>
+<div>
+	<p style="font-size: 20px;" class="text-center">&copy; 2019 Legal Luminaries All Rights Reserved. Design by <a href="http://softles.ml">Softles</a></p>
+</div>
+
+<!-- Footer -->
+	
+
+<script>
+	console.log("triggered");
+	$("#agree_disclaimer").click(function(){
+		var cname = "jsa_disclaimer_shown";
+		var cvalue = 1;
+		var exdays = 1;
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	});
+	$('#disclaimer_modal').modal({
+		keyboard: false,
+		backdrop: 'static'
+	});
+
+</script>
+	<script>
+$(function() {
+$( "#lawyer_name_search" ).autocomplete({
+	source: "name_search.php",
+	select: function (event, ui) {
+		window.location.assign(ui.item.page_name+"/"+ui.item.slug);
+	}
+});
+});
+
+$(function() {
+$('select').on('change', function (e) {
+	if($('.starting-active').length > 0){
+		var startingWith =$(".starting-active").children().html();
+		if(startingWith==""){
+			startingWith = "all";
+		}
+	} else{
+		startingWith = "all";
+	}
+	
+	
+	var designationSelected = $("#designation option:selected").html();
+	var locationSelected = $("#location option:selected").html();
+	var practiceareaSelected = $("#practice option:selected").html();
+	var link = "our-people492f.html?startswith="+startingWith+"&designation="+designationSelected+"&location="+locationSelected+"&practice_area="+practiceareaSelected;
+	location.replace(link);
+});
+});
+$(function() {
+$('.starting').click(function() {
+	var startingWith = $(this).html();
+	var designationSelected = $("#designation option:selected").html();
+	var locationSelected = $("#location option:selected").html();
+	var practiceareaSelected = $("#practice option:selected").html();
+	var link = "our-people492f.html?startswith="+startingWith+"&designation="+designationSelected+"&location="+locationSelected+"&practice_area="+practiceareaSelected;
+	location.replace(link);
+});
+});
+</script>
+</body>
+
+<!-- Mirrored from www.jsalaw.com/our-people by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Feb 2019 06:41:29 GMT -->
+</html>
