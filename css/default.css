@@ -263,6 +263,12 @@ margin-right: 40%
   }
 #so{
   color: black;
+  font-size: 30px;
 }
 :hover .so{
   color: rgb(177, 17, 17) !important;
+}
+
+.dropdown-menu{
+left: !important;
+}
